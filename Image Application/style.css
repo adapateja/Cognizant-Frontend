@@ -1,0 +1,21 @@
+
+.thumbnail {
+    width: 100px;
+    height: 70px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+
+.selected-image {
+    width: 400px;
+    height: 280px;
+    display: block;
+    margin-top: 20px;
+    border: 2px solid #ccc;
+}
+
+.image-display {
+    text-align: center;
+    margin-bottom: 20px;
+}
