@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTB Connection Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ACTB Connection Portal</h1>
+    
+    <form action="" method="post" id="connectionForm">
+        <label for="custname">Customer Name</label>
+        <input type="text" id="custname" name="custname" placeholder="Enter the customer name" required pattern="[A-Za-z\s]+" title="Name should only contain alphabets and spaces"><br><br>
+        
+        <label for="email">Customer Email</label>
+        <input type="email" id="email" name="email" placeholder="abc@gmail.com" required><br><br>
+        
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Enter the Mobile Number" pattern="[789][0-9]{9}" title="Mobile number must start with 7, 8, or 9 and be 10 digits" required><br><br>
+        
+        <label for="conntype">Type of Broadband</label>
+        <select name="conntype" id="conntype" required>
+            <option value="Pre">Pre</option>
+            <option value="Post">Post</option>
+        </select><br><br>
+        
+        <label for="scheme">Scheme Name</label><br>
+        <input type="radio" id="scheme1" name="scheme" value="Local" required> Local
+        <input type="radio" id="scheme2" name="scheme" value="STD"> STD
+        <input type="radio" id="scheme3" name="scheme" value="FullTalkTime"> FullTalkTime<br><br>
+        
+        <label for="duration">Connection Duration (Months)</label>
+        <input type="number" id="duration" name="duration" min="1" max="12" required><br><br>
+        
+        <button type="button" onclick="calculateBill()">Calculate Bill Amount</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <br>
+
+    <div style="color: aliceblue;" id="result"></div>
+
+    <table id="rentalcost" border="1" style="text-align: center;">
+        <tr>
+            <th>Connection Type</th>
+            <th>Call Limit</th>
+            <th>Monthly Rental</th>
+        </tr>
+        <tr>
+            <td>Pre</td>
+            <td>500</td>
+            <td>75</td>
+        </tr>
+        <tr>
+            <td>Post</td>
+            <td>Unlimited</td>
+            <td>150</td>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
