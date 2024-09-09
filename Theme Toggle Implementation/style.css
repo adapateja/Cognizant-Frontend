@@ -1,0 +1,29 @@
+
+
+:root {
+    --background-color-light: #f0f8ff; 
+    --background-color-dark: #1c1c1c;  
+    --text-color-light: #2e4053;      
+    --text-color-dark: #f7f9f9;       
+}
+
+.light-theme {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+.dark-theme {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+#toggle-button {
+    margin: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #ff6347; 
+    color: #ffffff;           
+    border: none;
+    border-radius: 5px;
+}
+
